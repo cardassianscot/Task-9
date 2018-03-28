@@ -186,7 +186,7 @@ namespace Task_9
             {
                 Name = "Cos θ",
                 Color = Color.Blue,
-                IsVisibleInLegend = false,
+                IsVisibleInLegend = true,
                 IsXValueIndexed = true,
                 ChartType = SeriesChartType.Spline,
                 BorderWidth = 2
@@ -195,7 +195,7 @@ namespace Task_9
             {
                 Name = "Sin θ",
                 Color = Color.Red,
-                IsVisibleInLegend = false,
+                IsVisibleInLegend = true,
                 IsXValueIndexed = true,
                 ChartType = SeriesChartType.Spline,
                 BorderWidth = 2
