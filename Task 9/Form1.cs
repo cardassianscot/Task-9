@@ -247,5 +247,23 @@ namespace Task_9
                 }
             }
         }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.FileName = "";
+            saveFileDialog1.Filter = "PNG Files|*.PNG";
+            DialogResult result = saveFileDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                try
+                {
+                    chart1.SaveImage(saveFileDialog1.FileName, ChartImageFormat.Png);
+                }
+                catch
+                {
+                    MessageBox.Show(saveFileDialog1.FileName, " failed to save.");
+                }
+            }
+        }
     }
 }
