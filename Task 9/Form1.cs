@@ -177,5 +177,37 @@ namespace Task_9
             drawGraphDouble(tans, "θ", "tan θ", false);
             
         }
+
+        private void sinAndCosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            chart1.Series.Clear();
+            chart1.ChartAreas[0].AxisX.IsMarginVisible = false;
+            Series series1 = new Series
+            {
+                Name = "Cos θ",
+                Color = Color.Blue,
+                IsVisibleInLegend = false,
+                IsXValueIndexed = true,
+                ChartType = SeriesChartType.Spline,
+                BorderWidth = 2
+            };
+            Series series2 = new Series
+            {
+                Name = "Sin θ",
+                Color = Color.Red,
+                IsVisibleInLegend = false,
+                IsXValueIndexed = true,
+                ChartType = SeriesChartType.Spline,
+                BorderWidth = 2
+            };
+            chart1.Series.Add(series1);
+            chart1.Series.Add(series2);
+            for (double i = 0; i < 361; i++)
+            {
+                series1.Points.AddXY(i, cos(i));
+                series2.Points.AddXY(i, sin(i));
+            }
+            chart1.ChartAreas[0].RecalculateAxesScale();
+        }
     }
 }

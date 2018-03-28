@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.polynomialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,23 +41,24 @@
             this.sinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sinAndCosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // chart1
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
+            chartArea5.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea5);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
+            legend5.Name = "Legend1";
+            this.chart1.Legends.Add(legend5);
             this.chart1.Location = new System.Drawing.Point(0, 52);
             this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chart1.Series.Add(series5);
             this.chart1.Size = new System.Drawing.Size(800, 398);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -110,7 +111,8 @@
             this.trigToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sinToolStripMenuItem,
             this.cosToolStripMenuItem,
-            this.tanToolStripMenuItem});
+            this.tanToolStripMenuItem,
+            this.sinAndCosToolStripMenuItem});
             this.trigToolStripMenuItem.Name = "trigToolStripMenuItem";
             this.trigToolStripMenuItem.Size = new System.Drawing.Size(78, 48);
             this.trigToolStripMenuItem.Text = "Trig";
@@ -135,6 +137,13 @@
             this.tanToolStripMenuItem.Size = new System.Drawing.Size(396, 46);
             this.tanToolStripMenuItem.Text = "tan";
             this.tanToolStripMenuItem.Click += new System.EventHandler(this.tanToolStripMenuItem_Click);
+            // 
+            // sinAndCosToolStripMenuItem
+            // 
+            this.sinAndCosToolStripMenuItem.Name = "sinAndCosToolStripMenuItem";
+            this.sinAndCosToolStripMenuItem.Size = new System.Drawing.Size(396, 46);
+            this.sinAndCosToolStripMenuItem.Text = "sin and cos";
+            this.sinAndCosToolStripMenuItem.Click += new System.EventHandler(this.sinAndCosToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -166,6 +175,7 @@
         private System.Windows.Forms.ToolStripMenuItem sinToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tanToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sinAndCosToolStripMenuItem;
     }
 }
 
