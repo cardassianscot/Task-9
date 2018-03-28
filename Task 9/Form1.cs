@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.IO;
 
 namespace Task_9
 {
@@ -208,6 +209,43 @@ namespace Task_9
                 series2.Points.AddXY(i, sin(i));
             }
             chart1.ChartAreas[0].RecalculateAxesScale();
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.FileName = "";
+            openFileDialog1.Filter = "CSV Files|*.csv";
+            DialogResult result = openFileDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                try
+                {
+                    List<PointD> points = new List<PointD>();
+                    string[] titles;
+                    using (StreamReader sr = new StreamReader(openFileDialog1.FileName))
+                    {
+                        titles = sr.ReadLine().Split(',');
+                        while (!sr.EndOfStream)
+                        {
+                            string[] l = sr.ReadLine().Split(',');
+                            points.Add(new PointD(double.Parse(l[0]), double.Parse(l[1])));
+                        }
+                    }
+                    drawGraphDouble(points, titles[0], titles[1]);
+                }
+                catch(IOException)
+                {
+                    MessageBox.Show(openFileDialog1.FileName + " failed to open.");
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show(openFileDialog1.FileName + " is in the wrong format.");
+                }
+                catch(IndexOutOfRangeException)
+                {
+                    MessageBox.Show(openFileDialog1.FileName + " is in the wrong format.");
+                }
+            }
         }
     }
 }

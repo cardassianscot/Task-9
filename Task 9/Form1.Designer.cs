@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.polynomialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,24 +42,27 @@
             this.cosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sinAndCosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // chart1
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea5);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend5.Name = "Legend1";
-            this.chart1.Legends.Add(legend5);
-            this.chart1.Location = new System.Drawing.Point(0, 52);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(0, 49);
             this.chart1.Name = "chart1";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chart1.Series.Add(series5);
-            this.chart1.Size = new System.Drawing.Size(800, 398);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(800, 401);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
@@ -67,11 +70,12 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
             this.polynomialToolStripMenuItem,
             this.trigToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 52);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 49);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -82,7 +86,7 @@
             this.yxToolStripMenuItem1,
             this.yxToolStripMenuItem2});
             this.polynomialToolStripMenuItem.Name = "polynomialToolStripMenuItem";
-            this.polynomialToolStripMenuItem.Size = new System.Drawing.Size(176, 48);
+            this.polynomialToolStripMenuItem.Size = new System.Drawing.Size(176, 45);
             this.polynomialToolStripMenuItem.Text = "Polynomial";
             // 
             // yxToolStripMenuItem
@@ -114,7 +118,7 @@
             this.tanToolStripMenuItem,
             this.sinAndCosToolStripMenuItem});
             this.trigToolStripMenuItem.Name = "trigToolStripMenuItem";
-            this.trigToolStripMenuItem.Size = new System.Drawing.Size(78, 48);
+            this.trigToolStripMenuItem.Size = new System.Drawing.Size(78, 45);
             this.trigToolStripMenuItem.Text = "Trig";
             // 
             // sinToolStripMenuItem
@@ -144,6 +148,25 @@
             this.sinAndCosToolStripMenuItem.Size = new System.Drawing.Size(396, 46);
             this.sinAndCosToolStripMenuItem.Text = "sin and cos";
             this.sinAndCosToolStripMenuItem.Click += new System.EventHandler(this.sinAndCosToolStripMenuItem_Click);
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(75, 45);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(396, 46);
+            this.openToolStripMenuItem.Text = "Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form1
             // 
@@ -176,6 +199,9 @@
         private System.Windows.Forms.ToolStripMenuItem cosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tanToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sinAndCosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
