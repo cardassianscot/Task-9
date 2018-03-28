@@ -37,6 +37,10 @@
             this.yxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yxToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.yxToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trigToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +66,8 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.polynomialToolStripMenuItem});
+            this.polynomialToolStripMenuItem,
+            this.trigToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 52);
@@ -100,6 +105,37 @@
             this.yxToolStripMenuItem2.Text = "y=x³";
             this.yxToolStripMenuItem2.Click += new System.EventHandler(this.yxToolStripMenuItem2_Click);
             // 
+            // trigToolStripMenuItem
+            // 
+            this.trigToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sinToolStripMenuItem,
+            this.cosToolStripMenuItem,
+            this.tanToolStripMenuItem});
+            this.trigToolStripMenuItem.Name = "trigToolStripMenuItem";
+            this.trigToolStripMenuItem.Size = new System.Drawing.Size(78, 48);
+            this.trigToolStripMenuItem.Text = "Trig";
+            // 
+            // sinToolStripMenuItem
+            // 
+            this.sinToolStripMenuItem.Name = "sinToolStripMenuItem";
+            this.sinToolStripMenuItem.Size = new System.Drawing.Size(396, 46);
+            this.sinToolStripMenuItem.Text = "sin";
+            this.sinToolStripMenuItem.Click += new System.EventHandler(this.sinToolStripMenuItem_Click);
+            // 
+            // cosToolStripMenuItem
+            // 
+            this.cosToolStripMenuItem.Name = "cosToolStripMenuItem";
+            this.cosToolStripMenuItem.Size = new System.Drawing.Size(396, 46);
+            this.cosToolStripMenuItem.Text = "cos";
+            this.cosToolStripMenuItem.Click += new System.EventHandler(this.cosToolStripMenuItem_Click);
+            // 
+            // tanToolStripMenuItem
+            // 
+            this.tanToolStripMenuItem.Name = "tanToolStripMenuItem";
+            this.tanToolStripMenuItem.Size = new System.Drawing.Size(396, 46);
+            this.tanToolStripMenuItem.Text = "tan";
+            this.tanToolStripMenuItem.Click += new System.EventHandler(this.tanToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -126,6 +162,10 @@
         private System.Windows.Forms.ToolStripMenuItem yxToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem yxToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem yxToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem trigToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sinToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tanToolStripMenuItem;
     }
 }
 
